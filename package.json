@@ -1,0 +1,34 @@
+{
+  "name": "@micromq/expect",
+  "version": "1.0.0",
+  "description": "Simple middleware for validate params.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "NODE_ENV=test mocha ./tests/* --exit --timeout 10000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micromq/expect.git"
+  },
+  "keywords": [
+    "expect",
+    "middleware",
+    "micromq",
+    "validate",
+    "json"
+  ],
+  "author": "Mikhail Semin",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/micromq/expect/issues"
+  },
+  "homepage": "https://github.com/micromq/expect#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.2"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {}
+}
