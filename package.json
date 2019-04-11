@@ -1,6 +1,6 @@
 {
   "name": "@micromq/expect",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple middleware for validate params.",
   "main": "src/index.js",
   "scripts": {
