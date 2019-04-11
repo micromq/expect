@@ -20,7 +20,7 @@ module.exports = (model) => {
         return;
       }
 
-      if (!value) {
+      if (value === undefined && value === null) {
         errors.push(`${key} is required`);
 
         return;
