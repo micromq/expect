@@ -7,10 +7,14 @@ module.exports = (model) => {
   return (req, res, next) => {
     const errors = [];
 
-    Object.entries(schema).forEach(([key, { types, required, validate }]) => {
-      const value = req.params[key];
+    Object.entries(schema).forEach(([key, { types, required, transform, validate }]) => {
+      const value = transform ? transform(req.params[key]) : req.params[key];
       const valueType = typeof value;
       const isTypeValid = types.some(type => type === valueType);
+
+      if (value !== req.params[key]) {
+        req.params[key] = value;
+      }
 
       if (!required && !value) {
         return;
